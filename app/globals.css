@@ -1,0 +1,153 @@
+/* Base reset and typography */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid #eee;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-text {
+  font-size: 14px;
+  color: #222;
+}
+
+.nav-links {
+  display: none;
+  gap: 16px;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (min-width: 960px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.link {
+  font-size: 14px;
+  color: #222;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.btn.primary {
+  background: #6636eb;
+  color: #fff;
+  border-color: #6636eb;
+}
+
+/* Hero */
+.hero {
+  padding: 72px 0 56px;
+  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+}
+
+.hero-inner {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 18px;
+  color: #444;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Section */
+.section {
+  padding: 56px 0;
+}
+
+.section h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.muted {
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  padding: 32px 0;
+  border-top: 1px solid #eee;
+  color: #444;
+}
+
+.small {
+  font-size: 12px;
+  color: #666;
+}
+
+
