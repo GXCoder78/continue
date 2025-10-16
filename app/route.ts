@@ -9,14 +9,14 @@ export async function GET() {
     const html = await readFile(filePath, { encoding: "utf8" });
     return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
   } catch {
+    // Fallback: fetch live site to keep UI working without local public assets
     try {
       const res = await fetch("https://www.continue.dev/", { cache: "no-store" });
       const html = await res.text();
       return new Response(html, { headers: { "content-type": "text/html; charset=utf-8" } });
-    } catch {
+    } catch (err) {
       return new Response("Failed to load UI", { status: 500 });
     }
   }
 }
-
 
